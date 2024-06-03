@@ -18,6 +18,6 @@ const backend = defineBackend({
 backend.addOutput({
   storage: {
     aws_region: "eu-west-2",
-    bucket_name: "arn:aws:s3:::testbucket-bduvi-neoscb"
+    bucket_name: "testbucket-bduvi-neoscb"
   },
 });
