@@ -2,10 +2,22 @@ import { defineBackend } from '@aws-amplify/backend';
 import { auth } from './auth/resource';
 import { data } from './data/resource';
 
-import { storage } from './storage/resource';
+//import { storage } from './storage/resource';
 
-defineBackend({
+// defineBackend({
+//   auth,
+//   data,
+//   storage,
+// });
+
+const backend = defineBackend({
   auth,
   data,
-  storage,
+});
+
+backend.addOutput({
+  storage: {
+    aws_region: "eu-west-2",
+    bucket_name: "arn:aws:s3:::testbucket-bduvi-neoscb"
+  },
 });
