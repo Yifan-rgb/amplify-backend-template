@@ -14,5 +14,8 @@ export const storage = defineStorage({
     'bilirubin-estimations/*': [
       allow.authenticated.to(['read']),
     ],
+    'picture-segmentations/*': [
+      allow.authenticated.to(['read']),
+    ],
   })
 });
